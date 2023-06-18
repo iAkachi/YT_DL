@@ -1,0 +1,25 @@
+﻿<Window x:Class="YT_DL_02.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="YouTube Info App" Height="450" Width="600"
+        Background="Black">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Label Grid.Row="0" Content="YouTube Link" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Consolas" FontSize="18"/>
+        <TextBox x:Name="YouTubeLinkTextBox" Grid.Row="1" Margin="10" FontFamily="Consolas" FontSize="16" BorderThickness="1" BorderBrush="White" Background="Black" Foreground="White"/>
+        <Button x:Name="FetchInfoButton" Grid.Row="2" Content="Fetch Info" Margin="10" Padding="10" FontFamily="Consolas" FontSize="16" BorderThickness="1" BorderBrush="Green" Background="Black" Foreground="Green" Click="FetchInfoButton_Click"/>
+
+        <StackPanel Grid.Row="3" Margin="10">
+            <TextBlock x:Name="VideoTitleLabel" FontFamily="Consolas" FontSize="18" Foreground="White"/>
+            <TextBlock x:Name="VideoAuthorLabel" FontFamily="Consolas" FontSize="16" Foreground="White" Margin="0 5"/>
+            <TextBlock x:Name="VideoDurationLabel" FontFamily="Consolas" FontSize="16" Foreground="White" Margin="0 5"/>
+            <TextBox x:Name="VideoDescriptionTextBox" FontFamily="Consolas" FontSize="16" Foreground="White" Background="Black" BorderThickness="1" BorderBrush="White" IsReadOnly="True" Margin="0 5"/>
+        </StackPanel>
+    </Grid>
+</Window>
